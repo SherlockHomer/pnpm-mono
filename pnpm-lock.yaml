@@ -10,6 +10,9 @@ importers:
 
   FE-apps/my-remix-app:
     dependencies:
+      '@mono/web-ui':
+        specifier: workspace:^
+        version: link:../../packages/web-ui
       '@remix-run/css-bundle':
         specifier: ^1.17.1
         version: 1.17.1

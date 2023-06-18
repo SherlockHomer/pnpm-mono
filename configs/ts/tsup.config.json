@@ -8,5 +8,6 @@
   "outDir": "dist",
   "entry": [
     "src/Index.tsx"
-  ]
+  ],
+  "dts": true
 }
