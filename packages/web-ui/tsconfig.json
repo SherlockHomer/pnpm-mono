@@ -1,0 +1,7 @@
+// 使用 tsup，该配置忽略
+{
+  "extends": "@mono/tsconfig",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  // 这里放在 公共中产生了相对位置错误，路径定位在 configs/ts 下
+  "exclude": ["dist", "node_modules", "**/*.spec.ts"],
+}

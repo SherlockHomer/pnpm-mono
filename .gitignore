@@ -1,0 +1,26 @@
+# logs
+logs
+*.log
+npm-debug.log*
+
+# node_modules
+**/node_modules/**
+
+# editor
+.vscode/
+.idea/
+
+# locks
+package-lock.json
+
+# tmp
+.tmp
+tmp
+
+# build
+**/build/**
+**/dist/**
+
+# other
+.DS_Store
+.store

@@ -1,0 +1,19 @@
+{
+  "name": "web-ui",
+  "version": "1.0.0",
+  "description": "the ui in web of our company",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@mono/tsconfig": "workspace:*",
+    "tsup": "^7.0.0"
+  }
+}

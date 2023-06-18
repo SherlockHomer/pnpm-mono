@@ -1,0 +1,5 @@
+packages:
+  - 'FE-apps/*'
+  - 'BE-apps/*'
+  - 'packages/*'
+  - 'configs/*'

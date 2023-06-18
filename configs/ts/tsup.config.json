@@ -1,0 +1,12 @@
+{
+  "format": [
+    "esm",
+    "cjs"
+  ],
+  "sourcemap": true,
+  "clean": true,
+  "outDir": "dist",
+  "entry": [
+    "src/Index.tsx"
+  ]
+}
