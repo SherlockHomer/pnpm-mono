@@ -7,5 +7,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nx": "^16.3.2",
+    "nx-cloud": "^16.0.5"
+  }
 }
