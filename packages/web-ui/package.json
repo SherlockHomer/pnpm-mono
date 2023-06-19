@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "the ui in web of our company",
   "main": "dist/Index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/Index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsup"
   },
