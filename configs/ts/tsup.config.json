@@ -4,5 +4,6 @@
   "clean": true,
   "outDir": "dist",
   "entry": ["src/Index.tsx"],
-  "dts": true
+  "dts": true,
+  "legacyOutput": true
 }
