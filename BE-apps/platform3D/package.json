@@ -1,0 +1,19 @@
+{
+  "name": "@mono/platform3d",
+  "version": "1.0.0",
+  "description": "a website for 3D like spline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "3D",
+    "3D platform",
+    "spline"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.14.2"
+  }
+}

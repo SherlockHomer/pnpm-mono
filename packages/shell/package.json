@@ -1,5 +1,5 @@
 {
-  "name": "shell-learning",
+  "name": "@mono/shell-learning",
   "version": "1.0.0",
   "description": "shell learning for beginners",
   "main": "index.js",

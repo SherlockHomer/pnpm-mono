@@ -1,6 +1,7 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
+    "outDir": "./dist", // 指定默认输出目录
     "jsx": "react-jsx",
     "allowJs": true,
     "esModuleInterop": true,
@@ -10,5 +11,5 @@
     "resolveJsonModule": true,
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "forceConsistentCasingInFileNames": true
-  }
+  },
 }
