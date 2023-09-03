@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
-    "commit": "git add . && git-cz",
+    "commit": "git-cz",
     "build:all": "nx run-many --target=build --all",
     "build:affected": "nx affected --target=build",
     "test:unit:all": "nx run-many --target=test:unit --all",
