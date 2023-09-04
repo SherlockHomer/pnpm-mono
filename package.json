@@ -21,6 +21,7 @@
     "@commitlint/cz-commitlint": "^17.5.0",
     "commitizen": "^4.3.0",
     "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "nx": "^16.3.2",
     "nx-cloud": "^16.0.5",
     "prettier": "^3.0.3"
@@ -29,5 +30,23 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
   }
 }
