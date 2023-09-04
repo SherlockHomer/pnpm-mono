@@ -1,0 +1,3 @@
+{
+  "extends": "@mono/eslint-config/.eslintrc.react.js"
+}

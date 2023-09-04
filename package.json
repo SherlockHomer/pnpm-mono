@@ -22,7 +22,8 @@
     "commitizen": "^4.3.0",
     "husky": "^8.0.3",
     "nx": "^16.3.2",
-    "nx-cloud": "^16.0.5"
+    "nx-cloud": "^16.0.5",
+    "prettier": "^3.0.3"
   },
   "config": {
     "commitizen": {
