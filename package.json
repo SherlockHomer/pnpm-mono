@@ -47,6 +47,9 @@
     "*.{js,jsx}": [
       "eslint",
       "prettier --parser=typescript --write"
+    ],
+    "*.{yml,yaml,css,scss,md}": [
+      "prettier --write"
     ]
   }
 }
