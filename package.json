@@ -2,6 +2,7 @@
   "name": "pnpm-mono",
   "version": "1.0.0",
   "description": "the project will have everything",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
@@ -19,6 +20,7 @@
     "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/config-pnpm-scopes": "^17.5.0",
     "@commitlint/cz-commitlint": "^17.5.0",
+    "chalk": "^5.3.0",
     "commitizen": "^4.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
@@ -26,7 +28,7 @@
     "nx-cloud": "^16.0.5",
     "prettier": "^3.0.3"
   },
-    "config": {
+  "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }

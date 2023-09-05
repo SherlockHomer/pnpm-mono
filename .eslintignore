@@ -9,7 +9,7 @@
 **/esm
 **/node_modules
 tsconfig.json
-/script
+/scripts
 **/rollups
 commitlint.config.js
 jest.config.cjs
