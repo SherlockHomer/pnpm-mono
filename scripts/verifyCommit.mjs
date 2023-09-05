@@ -1,3 +1,4 @@
+// 使用了 ESM 写法，所以文件后缀名改为 mjs
 import chalk from 'chalk';
 import { readFileSync } from 'fs';
 import path from 'path';

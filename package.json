@@ -2,7 +2,6 @@
   "name": "pnpm-mono",
   "version": "1.0.0",
   "description": "the project will have everything",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
@@ -32,6 +31,9 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "engines": {
+    "node": ">=16.19.1"
   },
   "lint-staged": {
     "*.json": [
