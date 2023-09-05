@@ -3,10 +3,9 @@
 
 # Way 1
 node scripts/verifyCommit.mjs
-python3 -v
 
 # Way 2
 # npx --no-install commitlint --edit "$1"
 
 # for test stop
-exit 1;
+# exit 1;
