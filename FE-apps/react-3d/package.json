@@ -37,6 +37,6 @@
     ]
   },
   "devDependencies": {
-    "@mono/eslint-config": "workspace:^"
+    "@mono/eslint-react": "workspace:^"
   }
 }

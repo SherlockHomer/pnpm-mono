@@ -115,7 +115,7 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4
     devDependencies:
-      '@mono/eslint-config':
+      '@mono/eslint-react':
         specifier: workspace:^
         version: link:../../configs/eslint
 

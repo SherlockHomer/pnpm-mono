@@ -26,14 +26,14 @@
     "nx-cloud": "^16.0.5",
     "prettier": "^3.0.3"
   },
-  "config": {
+    "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged & exit 1"
     }
   },
   "lint-staged": {
