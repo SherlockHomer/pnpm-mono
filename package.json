@@ -43,7 +43,7 @@
       "eslint",
       "prettier --parser=typescript --write"
     ],
-    "*.{js,jsx}": [
+    "*.{js,jsx,cjs,mjs}": [
       "eslint",
       "prettier --parser=typescript --write"
     ],
