@@ -31,11 +31,6 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.json": [
       "prettier --write"
