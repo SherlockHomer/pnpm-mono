@@ -26,4 +26,8 @@ if (!commitRE.test(msg)) {
     '  Why not use "npm run commit" to help you?\n'
   );
   process.exit(1);
+} else {
+  console.log()
+  console.log(chalk.green('👍 You are a good Commitizen!'))
+  console.log()
 }
