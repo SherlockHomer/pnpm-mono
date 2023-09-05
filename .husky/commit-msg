@@ -6,3 +6,6 @@ node scripts/verifyCommit.mjs
 
 # Way 2
 # npx --no-install commitlint --edit "$1"
+
+# for test stop
+# exit 1;
