@@ -12,6 +12,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@mono/eslint-vue": "workspace:^",
     "@mono/tsconfig": "workspace:^",
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.5"

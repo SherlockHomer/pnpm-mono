@@ -36,7 +36,7 @@
     "node": ">=16.19.1"
   },
   "lint-staged": {
-    "*.json": [
+    "*.{json,vue}": [
       "prettier --write"
     ],
     "*.ts?(x)": [

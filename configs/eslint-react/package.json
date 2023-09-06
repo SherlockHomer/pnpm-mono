@@ -2,7 +2,7 @@
   "name": "@mono/eslint-react",
   "private": true,
   "version": "1.0.0",
-  "description": "eslint config for monorepo projects which write js code",
+  "description": "eslint config for monorepo projects which write react code",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
