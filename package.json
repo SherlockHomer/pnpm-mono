@@ -43,11 +43,11 @@
       "prettier --write"
     ],
     "*.ts?(x)": [
-      "eslint",
+      "eslint --fix",
       "prettier --parser=typescript --write"
     ],
     "*.{js,jsx,cjs,mjs}": [
-      "eslint",
+      "eslint --fix",
       "prettier --write"
     ],
     "*.{yml,yaml,css,scss,md}": [
