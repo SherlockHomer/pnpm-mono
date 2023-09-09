@@ -1,6 +1,4 @@
 # 注意 ：去掉该文件后， esm 下文件不会爆红
-# configs/eslint
-/configs
 /node_modules
 /dist
 /doc
@@ -8,9 +6,12 @@
 **/build
 **/esm
 **/node_modules
-tsconfig.json
-/scripts
-**/rollups
-commitlint.config.js
-jest.config.cjs
+
+
+# 待定
+# tsconfig.json
+# /scripts
+# **/rollups
+# commitlint.config.js
+# jest.config.cjs
 # rollup.config.js

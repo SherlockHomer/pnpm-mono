@@ -5,9 +5,8 @@ const router = new Router();
 
 router.use('/user', UserRouter.routes(), UserRouter.allowedMethods());
 
-router;
 router.get('koa-example', '/', async (ctx) => {
-  let html = `
+  const html = `
     <h1 style="text-align:center">Hello my Koa Router</h1>
   `;
   ctx.body = html;

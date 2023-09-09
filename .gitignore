@@ -12,6 +12,7 @@ npm-debug.log*
 
 # locks
 package-lock.json
+pnpm-lock.yaml
 
 # tmp
 .tmp

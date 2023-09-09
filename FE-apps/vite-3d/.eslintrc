@@ -1,3 +1,4 @@
 {
-  "extends": "@mono/eslint-vue/.eslintrc.js"
+  "extends": "@mono/eslint-config-vue/.eslintrc.js",
+  "rules": {}
 }

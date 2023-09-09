@@ -1,5 +1,5 @@
 {
-  "name": "@mono/eslint-vue",
+  "name": "@mono/eslint-config-vue",
   "private": true,
   "version": "1.0.0",
   "description": "eslint config for monorepo projects which write vue code",
@@ -11,13 +11,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "eslint": "8.38.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.2",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3"
   }

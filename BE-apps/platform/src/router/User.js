@@ -3,9 +3,9 @@ const Router = require('@koa/router');
 const UserRouter = new Router();
 
 UserRouter.get('/info', (ctx) => {
-  let cookies = ctx.cookies;
+  const cookies = ctx.cookies;
   const email = cookies.get('email') || '';
-  let html = `
+  const html = `
     <h1 style="text-align:center;white-space:break-spaces">
       Opps, your infomation is fucked up\n
       Your email is ${email}\n
@@ -23,10 +23,10 @@ UserRouter.get('/info', (ctx) => {
 });
 
 UserRouter.get('/login', (ctx) => {
-  let cookies = ctx.cookies;
+  const cookies = ctx.cookies;
   const email = cookies.get('email') || '';
 
-  let html = `
+  const html = `
     <h1>koa2 login</h1>
     <form method="POST" action="/user/login">
       <p>nickName</p>
