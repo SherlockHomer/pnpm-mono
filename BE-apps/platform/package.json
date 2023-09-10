@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "debug": "nodemon --inspect index.js",
+    "dev": "nodemon src/index.js",
+    "debug": "nodemon --inspect src/index.js",
     "lint": "eslint ./src/**.js"
   },
   "keywords": [
