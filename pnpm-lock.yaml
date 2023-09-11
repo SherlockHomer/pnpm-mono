@@ -130,6 +130,9 @@ importers:
 
   FE-apps/react-3d:
     dependencies:
+      '@mono/web-ui':
+        specifier: workspace:^
+        version: link:../../packages/web-ui
       '@testing-library/jest-dom':
         specifier: ^5.17.0
         version: 5.17.0
