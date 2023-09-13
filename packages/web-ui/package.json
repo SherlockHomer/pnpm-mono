@@ -11,12 +11,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "react": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@mono/eslint-config-react": "workspace:^",
     "@mono/tsconfig": "workspace:*",
     "tsup": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   }
 }
