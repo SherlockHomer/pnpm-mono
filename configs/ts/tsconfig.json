@@ -7,9 +7,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "module": "CommonJS",
+    "module": "ESNext",
     "resolveJsonModule": true,
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "forceConsistentCasingInFileNames": true
-  },
+  }
 }

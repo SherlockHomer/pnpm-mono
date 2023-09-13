@@ -4,6 +4,7 @@
   "description": "the ui in web of our company",
   "main": "dist/Index.js",
   "types": "dist/Index.d.ts",
+  "module": "dist/esm/Index.js",
   "scripts": {
     "build": "rm -rf dist && tsup"
   },
@@ -14,6 +15,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@mono/eslint-config-react": "workspace:^",
     "@mono/tsconfig": "workspace:*",
     "tsup": "^7.0.0"
   }

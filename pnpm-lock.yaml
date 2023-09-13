@@ -260,6 +260,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
+      '@mono/eslint-config-react':
+        specifier: workspace:^
+        version: link:../../configs/eslint-react
       '@mono/tsconfig':
         specifier: workspace:*
         version: link:../../configs/ts
