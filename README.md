@@ -11,3 +11,9 @@
 find mismatches version in every package.json of subpackages & fix them, be care `npx syncpack list-mismatches` `npx syncpack fix-mismatches`
 
 [watch more](https://jamiemason.github.io/syncpack/fix-mismatches)
+
+### builds
+
+<!-- build react-3d-nginx -->
+
+- ⚠️ 指定 build.Dockerfile 后会指定 build.Dockerfile.dockerignore ，会忽略根目录的 .dockeringore，像 node_modules 这种就需要重写 docker build . --target react-3d-nginx --tag react-3d-ng:latest -f ./docker/build.Dockerfile
