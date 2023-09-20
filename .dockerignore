@@ -4,3 +4,11 @@ node_modules
 .gitignore
 *.md
 build
+
+# docker
+docker
+.dockerignore
+
+# other
+Makefile
+README.md

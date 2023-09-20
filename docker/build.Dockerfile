@@ -11,32 +11,13 @@ COPY ./pnpm-workspace.yaml /app-config
 
 
 FROM node:16.20-slim AS mono-dep
-RUN npm install -g pnpm
+ARG PNPM_VERSION=8.6.2
+RUN npm --no-update-notifier install -g pnpm@${PNPM_VERSION}
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 WORKDIR /app
 COPY --from=base-package-config /app-config /app
 
+# todo: 实现 turbo prune 的仅依赖获取
 # 安装依赖
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-
-
-# 加入源码
-FROM mono-dep AS mono
-COPY . /app
-
-
-# stage mono 包括所有其他包的源码
-FROM mono AS react-3d
-RUN npx nx build @mono/react-3d
-
-
-# Final Stage，只要 react-3d build
-FROM nginx AS react-3d-nginx
-
-EXPOSE 3000
-
-COPY --from=mono /app/FE-apps/react-3d/nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-3d /app/FE-apps/react-3d/build /usr/share/nginx/html
-
-CMD ["nginx", "-g", "daemon off;"]
