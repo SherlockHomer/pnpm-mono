@@ -1,0 +1,6 @@
+FROM mono-dep AS mono
+COPY . /app
+
+FROM mono AS dev-react-3d
+EXPOSE 3000
+CMD [ "npx", "nx", "dev", "@mono/react-3d"]

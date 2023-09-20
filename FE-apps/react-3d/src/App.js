@@ -7,7 +7,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <Button>Hello new dockerfile in package! Huzzha!!!</Button>
+        <Button>I like using compose in dev! Huzzha!!!</Button>
         <a
           className='App-link'
           href='https://reactjs.org'

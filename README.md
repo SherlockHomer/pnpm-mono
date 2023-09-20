@@ -20,4 +20,5 @@ find mismatches version in every package.json of subpackages & fix them, be care
 - 改进 v1：基础的 mono-dep 在总包下，子包自己实现 dockerfile
   - [x] docker build . --target mono-dep --tag mono-dep:latest -f ./docker/build.Dockerfile
   - [x] docker build . --target react-3d-ng --tag react-3d-ng:latest -f ./FE-apps/react-3d/docker/Dockerfile
+  - [x] dev: docker build . --target dev-react-3d --tag dev-react-3d:latest -f ./FE-apps/react-3d/docker/Dockerfile.dev
   - [ ] root/docker/build.Dockerfile prune

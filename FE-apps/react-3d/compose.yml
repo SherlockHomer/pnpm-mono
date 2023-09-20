@@ -1,0 +1,12 @@
+services:
+  dev:
+    build:
+      context: ../../
+      dockerfile: ./FE-apps/react-3d/docker/Dockerfile.dev
+      target: dev-react-3d
+    container_name: dev-react-3d
+    ports:
+      - 3000:3000
+    volumes:
+      # 这里的 文件索引位置不同于 build.context
+      - ./src:/app/FE-apps/react-3d/src
