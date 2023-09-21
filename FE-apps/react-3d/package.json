@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/**",
-    "dev:docker": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
+    "docker:build:container": "docker build ../../ --target react-3d-ng --tag react-3d-ng:latest -f ./docker/Dockerfile",
+    "docker:dev:container": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
   },
   "browserslist": {
     "production": [

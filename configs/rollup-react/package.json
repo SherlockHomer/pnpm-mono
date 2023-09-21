@@ -1,0 +1,20 @@
+{
+  "name": "@mono/rollup-react",
+  "version": "1.0.0",
+  "description": "common rollup config for react",
+  "main": "index.js",
+  "bin": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mono/eslint-config-react": "workspace:^",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "autoprefixer": "^10.4.16",
+    "rollup": "^3.29.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  }
+}

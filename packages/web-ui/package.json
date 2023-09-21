@@ -6,16 +6,15 @@
   "types": "dist/Index.d.ts",
   "module": "dist/esm/Index.js",
   "scripts": {
-    "build": "rm -rf dist && tsup"
+    "build": "rm -rf dist && ../../configs/rollup-react/node_modules/rollup/dist/bin/rollup --config"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@mono/eslint-config-react": "workspace:^",
-    "@mono/tsconfig": "workspace:*",
-    "tsup": "^7.0.0"
+    "@mono/rollup-react": "workspace:^",
+    "@mono/tsconfig": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18.2.0",

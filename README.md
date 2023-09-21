@@ -14,11 +14,11 @@ find mismatches version in every package.json of subpackages & fix them, be care
 
 ### builds
 
-#### build react-3d-nginx
+#### docker build react-3d-nginx
 
 - ⚠️ 指定 build.Dockerfile 后会指定 build.Dockerfile.dockerignore ，会忽略根目录的 .dockeringore，像 node_modules 这种就需要重写 docker build . --target react-3d-nginx --tag react-3d-ng:latest -f ./docker/build.Dockerfile
-- 改进 v1：基础的 mono-dep 在总包下，子包自己实现 dockerfile
-  - [x] docker build . --target mono-dep --tag mono-dep:latest -f ./docker/build.Dockerfile
-  - [x] docker build . --target react-3d-ng --tag react-3d-ng:latest -f ./FE-apps/react-3d/docker/Dockerfile
-  - [x] dev: docker build . --target dev-react-3d --tag dev-react-3d:latest -f ./FE-apps/react-3d/docker/Dockerfile.dev
+- 改进 v1：基础的 mono-dep 总包下，子包自己实现 dockerfile
+  - [x] root/package.json/docker:mono:container for mono-dep
+  - [x] 例如 react-3d 下实现了 Dockerfile(for build) && Dockerfile.dev(for dev)，查看 react-3d/package.json/docker:xxx:container
+  - [x] react-3d/compose.yml 用于启动 dev 服务，更加便捷且有热更，_当依赖的内容没有通过 volumes 挂载时，热更会失败，需要 compose build_
   - [ ] root/docker/build.Dockerfile prune

@@ -5,17 +5,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "husky install",
+    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + & rm pnpm-lock.yaml",
     "commit": "git-cz",
     "build:all": "nx run-many --target=build --all",
     "build:affected": "nx affected --target=build",
     "test:unit:all": "nx run-many --target=test:unit --all",
     "test:unit:affected": "nx affected --target=test:unit",
-    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + & rm pnpm-lock.yaml"
+    "docker:mono:container": "docker build . --target mono-dep --tag mono-dep:latest -f ./docker/build.Dockerfile"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/config-pnpm-scopes": "^17.5.0",
