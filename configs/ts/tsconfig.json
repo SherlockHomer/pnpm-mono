@@ -6,7 +6,6 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowImportingTsExtensions": true,
     "moduleResolution": "node",
     "module": "ESNext",
     "resolveJsonModule": true,
