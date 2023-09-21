@@ -1,0 +1,6 @@
+// 使用 tsup，该配置忽略
+{
+  "extends": "@mono/tsconfig/tsconfig.json",
+  "include": ["src/**/*", "index.mjs"],
+  "exclude": ["dist/**/*", "node_modules", "**/*.spec.ts"]
+}

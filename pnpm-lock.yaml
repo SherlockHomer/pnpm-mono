@@ -130,6 +130,9 @@ importers:
 
   FE-apps/react-3d:
     dependencies:
+      '@mono/web-lib':
+        specifier: workspace:^
+        version: link:../../packages/web-lib
       '@mono/web-ui':
         specifier: workspace:^
         version: link:../../packages/web-ui
@@ -253,6 +256,18 @@ importers:
   configs/ts: {}
 
   packages/shell: {}
+
+  packages/web-lib:
+    devDependencies:
+      '@mono/eslint-config-react':
+        specifier: workspace:^
+        version: link:../../configs/eslint-react
+      '@mono/tsconfig':
+        specifier: workspace:^
+        version: link:../../configs/ts
+      tsup:
+        specifier: ^7.0.0
+        version: 7.0.0(ts-node@10.9.1)(typescript@5.2.2)
 
   packages/web-ui:
     dependencies:
