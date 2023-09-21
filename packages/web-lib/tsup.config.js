@@ -3,6 +3,6 @@ import config from '@mono/tsconfig';
 
 export default defineConfig({
   ...config,
-  entry: ['index.mjs'],
+  entry: ['src/Index.js'],
   format: ['esm', 'cjs', 'iife'],
 });
