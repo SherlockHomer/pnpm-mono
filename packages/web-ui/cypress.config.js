@@ -14,7 +14,6 @@ module.exports = defineConfig({
       // even I don't use vite, I have to write this code
       bundler: 'vite',
     },
-    specPattern: '**/*.cy.{js,jsx,ts,tsx}',
     supportFile: false,
     setupNodeEvents(on, config) {
       on(
