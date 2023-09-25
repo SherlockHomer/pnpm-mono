@@ -5,6 +5,9 @@ const commonjs = require('@rollup/plugin-commonjs');
 // const sass =  require('node-sass);
 const postcss = require('rollup-plugin-postcss');
 const terser = require('rollup-plugin-terser').terser;
+const replace = require('rollup-plugin-replace');
+
+const { PRODUCTION } = process.env;
 
 function getConfig(packageJson) {
   return {
@@ -23,6 +26,9 @@ function getConfig(packageJson) {
     ],
     plugins: [
       resolve(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify(!PRODUCTION ? 'production' : 'development'),
+      }),
       peerDepsExternal(),
       commonjs(),
       babel({

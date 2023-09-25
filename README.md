@@ -24,3 +24,9 @@ find mismatches version in every package.json of subpackages & fix them, be care
   - [x] 例如 react-3d 下实现了 Dockerfile(for build) && Dockerfile.dev(for dev)，查看 react-3d/package.json/docker:xxx:container
   - [x] react-3d/compose.yml 用于启动 dev 服务，更加便捷且有热更，_当依赖的内容没有通过 volumes 挂载时，热更会失败，需要 compose build_
   - [ ] root/docker/build.Dockerfile prune
+
+### types intellisense
+
+#### cypress
+
+when you use cypress in your subpackage, you may need this. add this in your tsconfig.json `"compilerOptions": {     "types": ["cypress"] }`

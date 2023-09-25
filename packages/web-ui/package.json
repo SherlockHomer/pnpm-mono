@@ -6,7 +6,9 @@
   "types": "dist/Index.d.ts",
   "module": "dist/esm/Index.js",
   "scripts": {
-    "build": "rm -rf dist && ../../configs/rollup-react/node_modules/rollup/dist/bin/rollup --config"
+    "build": "rm -rf dist && ../../configs/rollup-react/node_modules/rollup/dist/bin/rollup --config",
+    "cypress:open": "cypress open --component",
+    "cypress:run": "cypress run --component"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,10 @@
   "devDependencies": {
     "@mono/eslint-config-react": "workspace:^",
     "@mono/rollup-react": "workspace:^",
-    "@mono/tsconfig": "workspace:*"
+    "@mono/tsconfig": "workspace:*",
+    "cypress": "^13.2.0",
+    "cypress-rollup-preprocessor": "^1.2.0",
+    "vite": "^4.4.5"
   },
   "peerDependencies": {
     "react": ">=18.2.0",
