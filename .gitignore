@@ -25,3 +25,6 @@ tmp
 # other
 .DS_Store
 .store
+
+# local config from yourself
+self-configs

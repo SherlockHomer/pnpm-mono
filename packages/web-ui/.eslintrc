@@ -1,4 +1,8 @@
 {
   "root": true,
-  "extends": "@mono/eslint-config-react"
+  "extends": "@mono/eslint-config-react",
+  "rules": {
+    "cypress/no-unnecessary-waiting": "off",
+    "cypress/unsafe-to-chain-command": "off"
+  }
 }

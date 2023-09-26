@@ -32,3 +32,16 @@ Cypress.Commands.add('mount', (component, options) => {
   // ie: return mount(<MyProvider>{component}</MyProvider>, options)
   return mount(component, options);
 });
+
+Cypress.Commands.add('iframeOnload', { prevSubject: 'element' }, ($iframe) => {
+  return new Cypress.Promise((resolve) => {
+    $iframe.on('load', () => {
+      resolve($iframe.contents().find('body'));
+    });
+  });
+});
+Cypress.Commands.add('iframeDirect', { prevSubject: 'element' }, ($iframe) => {
+  return new Cypress.Promise((resolve) => {
+    resolve($iframe.contents().find('body'));
+  });
+});
