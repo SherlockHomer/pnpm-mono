@@ -19,10 +19,11 @@
       "dependsOn": ["^build"]
     },
     "test": {
-      "inputs": ["noMarkdown", "^noMarkdown"]
+      "inputs": ["noMarkdown", "^noMarkdown"],
+      "dependsOn": ["^build"]
     }
   },
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   }
 }
