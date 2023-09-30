@@ -5,7 +5,7 @@
   "description": "eslint config for monorepo projects which write vue code",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'create some tests, please'"
   },
   "keywords": [],
   "author": "",
