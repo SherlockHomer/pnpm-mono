@@ -13,17 +13,17 @@ on:
       - main
 
 jobs:
-  test:
+  setup:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.20'
+          node-version: '18.18.0'
 
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8.6.2
           run_install: false
@@ -31,18 +31,48 @@ jobs:
       - name: Get pnpm store directory
         shell: bash
         run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+          echo "PNPM_STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
-          path: ${{ env.STORE_PATH }}
+          path: ${{ env.PNPM_STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: cache node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+
       - name: Install dependencies
+        if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: pnpm install --frozen-lockfile
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.18.0'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.2
+          run_install: false
+
+      - name: restore cache from node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Test all package
         run: npm run test
+    needs: setup
