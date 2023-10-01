@@ -54,10 +54,10 @@ jobs:
         with:
           ref: main
 
-      - uses: actions/checkout@v4
+      - run: echo "REF=${{ github.event.pull_request && github.head_ref || github.ref_name }}" >> $GITHUB_ENV
 
-      # - name: checkout current
-      #   run: git checkout ${{ github.ref_name }}
+      - name: checkout current
+        run: git checkout ${{ env.REF }}
 
       - uses: actions/setup-node@v3
         with:
