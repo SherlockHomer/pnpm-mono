@@ -9,6 +9,7 @@
     "build:all": "nx run-many --target=build --all",
     "build:affected": "nx affected --target=build",
     "test": "nx run-many --target=test --all",
+    "test:affected": "nx affected --target=test",
     "test:unit:all": "nx run-many --target=test:unit --all",
     "test:unit:affected": "nx affected --target=test:unit",
     "docker:mono:container": "docker build . --target mono-dep --tag mono-dep:latest -f ./docker/build.Dockerfile"
