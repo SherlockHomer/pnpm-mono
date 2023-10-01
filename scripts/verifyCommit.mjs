@@ -9,6 +9,13 @@ const msg = readFileSync(msgPath, 'utf-8').trim();
 const commitRE =
   /^(revert|feat|fix|docs|dx|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release)(\(.+\))?: .{1,95}/;
 
+if (msg.indexOf('Merge branch') > -1) {
+  console.log();
+  console.log(chalk.green('Ignore Merge branch way'));
+  console.log();
+  process.exit(0);
+}
+
 if (!commitRE.test(msg)) {
   console.log();
   console.error(
@@ -27,7 +34,7 @@ if (!commitRE.test(msg)) {
   );
   process.exit(1);
 } else {
-  console.log()
-  console.log(chalk.green('👍 You are a good Commitizen!'))
-  console.log()
+  console.log();
+  console.log(chalk.green('👍 You are a good Commitizen!'));
+  console.log();
 }

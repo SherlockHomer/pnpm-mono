@@ -32,6 +32,9 @@ importers:
       '@commitlint/cz-commitlint':
         specifier: ^17.5.0
         version: 17.5.0(commitizen@4.3.0)(inquirer@8.2.6)
+      '@mono/eslint-config-react':
+        specifier: workspace:^
+        version: link:configs/eslint-react
       chalk:
         specifier: ^5.3.0
         version: 5.3.0

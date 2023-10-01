@@ -1,5 +1,9 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+### commit rules
+
+- start with revert|feat|fix|docs|dx|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release
+
 ### 关于 eslint
 
 一定要有 IDE 扩展程序
