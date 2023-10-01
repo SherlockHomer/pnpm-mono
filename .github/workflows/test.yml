@@ -66,6 +66,9 @@ jobs:
         with:
           keys: ${{ runner.os }}-pnpm-store-
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Test all package
         run: npm run test
     needs: setup
