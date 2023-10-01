@@ -28,7 +28,7 @@ jobs:
 
       - run: echo "REF=${{ github.event.pull_request && github.head_ref || github.ref_name }}" >> $GITHUB_ENV
 
-      - run: git fetch ${{ env.REF }}
+      - run: git fetch origin ${{ env.REF }}
       - run: echo ${{ env.REF }}
       - run: echo $REF
 
