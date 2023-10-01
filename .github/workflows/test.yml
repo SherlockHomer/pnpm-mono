@@ -54,8 +54,10 @@ jobs:
         with:
           ref: main
 
-      - name: checkout current
-        run: git checkout ${{ github.ref_name }}
+      - uses: actions/checkout@v4
+
+      # - name: checkout current
+      #   run: git checkout ${{ github.ref_name }}
 
       - uses: actions/setup-node@v3
         with:
