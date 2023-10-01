@@ -50,6 +50,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      # - name: fetch main to diff current
+      # run: git fetch origin master:refs/remotes/origin/master
       - uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
