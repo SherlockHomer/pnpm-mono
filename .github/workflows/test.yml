@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - release/*
+      - github-action
   pull_request:
     branches:
       - main
@@ -41,13 +42,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: cache node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
-
       - name: Install dependencies
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: pnpm install --frozen-lockfile
@@ -67,11 +61,10 @@ jobs:
           version: 8.6.2
           run_install: false
 
-      - name: restore cache from node_modules
+      - name: restore cache from pnpm store
         uses: actions/cache@v3
         with:
-          path: node_modules
-          key: node_modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+          keys: ${{ runner.os }}-pnpm-store-
 
       - name: Test all package
         run: npm run test
