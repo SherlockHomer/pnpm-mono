@@ -49,12 +49,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # fetch main but checkout current next, for nx affected defaultBase
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: main
 
-      - name: fetch main to diff current
-        run: 'git branch --track main origin/main'
+      - name: checkout current
+        run: git checkout ${{ github.ref }}
 
       - uses: actions/setup-node@v3
         with:
