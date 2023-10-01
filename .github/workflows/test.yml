@@ -52,7 +52,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: fetch main to diff current
-        run: git fetch origin main:refs/remotes/origin/main
+        run: 'git branch --track main origin/main'
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{env.NODE_VERSION}}
