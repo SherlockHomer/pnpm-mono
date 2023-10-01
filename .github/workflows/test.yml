@@ -55,7 +55,7 @@ jobs:
           ref: main
 
       - name: checkout current
-        run: git checkout ${{ github.ref }}
+        run: git checkout ${{ github.sha }}
 
       - uses: actions/setup-node@v3
         with:
