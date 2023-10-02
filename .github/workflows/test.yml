@@ -85,6 +85,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Test affected package
+      - name: Unit test in affected package
         run: npm run test:affected
+
+      - name: E2E test in affected package
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run test:comp:affected
     needs: setup
