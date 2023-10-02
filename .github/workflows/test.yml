@@ -88,10 +88,15 @@ jobs:
       - name: Unit test in affected package
         run: npm run test:affected
 
-      - name: Component test in affected package
+      - name: Install cypress
         uses: cypress-io/github-action@v6
         with:
+          runTests: false
           install: false
           component: true
-          start: npm run test:comp:affected
+          start: npm start
+
+      - name: Component test in affected package
+        run: npm run test:comp:affected
+
     needs: setup
