@@ -5,7 +5,7 @@ import { mount } from 'cypress/react';
 
 describe('<Button />', () => {
   it('mounts', () => {
-    mount(<Button>sher</Button>);
-    cy.get('[data-cy="button"]').should('have.text', 'sher');
+    mount(<Button>sherlock</Button>);
+    cy.get('[data-cy="button"]').should('have.text', 'sherlock');
   });
 });

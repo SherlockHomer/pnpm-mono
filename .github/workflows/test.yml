@@ -42,6 +42,12 @@ jobs:
           path: ${{env.PNPM_STORE_PATH}}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
 
+      - name: Setup cypress cache
+        uses: actions/cache@v3
+        with:
+          path: '/home/runner/.cache/Cypress'
+          key: ${{ runner.os }}-Cypress-${{ hashFiles('**/pnpm-lock.yaml') }}
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -82,9 +88,28 @@ jobs:
           path: ${{env.PNPM_STORE_PATH}}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
 
+      - name: restore cache from cypress
+        uses: actions/cache@v3
+        with:
+          fail-on-cache-miss: true
+          path: '/home/runner/.cache/Cypress'
+          key: ${{ runner.os }}-Cypress-${{ hashFiles('**/pnpm-lock.yaml') }}
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Test affected package
+      - name: Unit test in affected package
         run: npm run test:affected
+
+      - name: Install cypress
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+          install: false
+          component: true
+          start: npm start
+
+      - name: Component test in affected package
+        run: npm run test:comp:affected
+
     needs: setup
