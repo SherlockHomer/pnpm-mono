@@ -1,27 +1,32 @@
+'use client';
 import { useState } from 'react';
-import AceEditor from 'react-ace';
+import Editor from '@/components/code/Editor';
+import getIframeSrc from './codeInIframe.template';
 
-import 'ace-builds/src-noconflict/mode-javascript';
-import 'ace-builds/src-noconflict/theme-github';
-import 'ace-builds/src-noconflict/ext-language_tools';
-
-export default function CodeWar({ value }) {
-  const [code, setCode] = useState(value);
+export default function CodeWar({ bgColor, question, code }) {
+  const [newCode, setCode] = useState('');
+  const onChangeCode = (code) => {
+    setCode(code);
+  };
   return (
-    <AceEditor
-      mode='javascript'
-      theme='gtihub'
-      value={code}
-      onChange={(value) => {
-        setCode(value);
-      }}
-      fontSize={16}
-      width='100%'
-      height='100%'
-      // showPrintMargin={true}
-      showGutter={false}
-      // highlightActiveLine={true}
-      editorProps={{ $blockScrolling: true }}
-    />
+    <div className='flex flex-row min-h-screen'>
+      <div className={`w-1/2 ${bgColor} text-xl p-2`}>
+        <div className='flex flex-col h-1/2 overflow-y-scroll border-b-4 border-dashed'>
+          {question}
+        </div>
+        <div className='flex flex-col h-1/2 overflow-y-scroll'>
+          {/* todo: add proxy prevent window.parent */}
+          <iframe
+            width='100%'
+            height='100%'
+            sandbox='allow-scripts'
+            srcDoc={getIframeSrc(newCode)}
+          ></iframe>
+        </div>
+      </div>
+      <div className='w-1/2 bg-slate-500'>
+        <Editor value={code} onChange={onChangeCode} />
+      </div>
+    </div>
   );
 }

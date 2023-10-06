@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
+      <meta httpEquiv='Content-Security-Policy' content="img-src 'self'; frame-src 'self';"></meta>
       <body className={inter.className}>{children}</body>
     </html>
   );
