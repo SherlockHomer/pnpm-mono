@@ -1,0 +1,16 @@
+{
+  "name": "@mono/learn-corejs",
+  "version": "1.0.0",
+  "description": "learn-corejs and test",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mono/eslint-config-react": "workspace:^",
+    "@mono/tsconfig": "workspace:^"
+  },
+  "dependencies": {
+    "core-js-pure": "^3.33.0"
+  }
+}
