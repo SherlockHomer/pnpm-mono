@@ -1,5 +1,8 @@
 /* eslint-disable */
-// node_modules/.pnpm/core-js-pure@3.33.0/node_modules/core-js-pure/internals/function-bind.js 26:20 改为 !NATIVE_BIND， 从而不用原生的 bind
+// 根据 node_modules/.pnpm/core-js-pure@3.33.0/node_modules/core-js-pure/internals/function-bind.js 26:20 中的 NATIVE_BIND 逻辑，需要改动下现有的 .bind 为空
+
+Function.prototype.bindOrigin = Function.prototype.bind;
+Function.prototype.bind = function () {};
 const bindCore = require('core-js-pure/actual/function/bind');
 
 let Child_prototype = null;
@@ -57,7 +60,7 @@ Function.prototype.self_bind = function (context) {
 };
 
 // origin bind
-var bindFoo = Child.bind(foo, 'daisy');
+var bindFoo = Child.bindOrigin(foo, 'daisy');
 console.log('原生 bindFoo.prototype: ', bindFoo.prototype);
 
 let bindFoo_obj = bindFoo('18');
