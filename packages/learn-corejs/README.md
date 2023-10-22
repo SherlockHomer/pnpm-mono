@@ -4,4 +4,4 @@ https://github.com/zloirock/core-js
 
 ## Be careful
 
-- Some source code should be changed. For example, I change node_modules/core-js-pure/internals/function-bind.js for test corejs-bind.
+- The change on node_modules is global for all sub packages. Don't change them for some case. You may copy the package to monorepo as a subproject.
