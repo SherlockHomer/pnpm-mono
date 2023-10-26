@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^"
+    "@mono/eslint-config-react": "workspace:^",
+    "eslint": "8.22.0"
   }
 }

@@ -8,9 +8,9 @@
 
 一定要有 IDE 扩展程序
 
-- 阶段1: configs/安装相同 eslint，可以通过 syncpack 管理 （更直接的方案可以是 删除 configs 下的 eslint ，在 root 下安装，这样符合 lint-staged 触发的 唯一eslint 处理 ）
-  - eslint 触发后在具体文件上会按照当前文件所在的 .eslintrc ，所以不同项目规则不同是可以生效的。
-- 阶段2: 应用项目各自安装 eslint，这样不同项目不同规则，还能兼容老版本的 eslint
+- [x] 阶段1: 严格模式：仅 root 安装ESLint，configs/x 同步 root，
+  - 通过 syncpack 管理
+  - 利于 lint-staged 触发的 唯一eslint 处理
 
 ### syncpack
 
