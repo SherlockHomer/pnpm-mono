@@ -1,5 +1,8 @@
 module.exports = {
-  extends: ['@commitlint/config-conventional', '@commitlint/config-pnpm-scopes'],
+  extends: [
+    '@commitlint/config-conventional',
+    '@commitlint/config-pnpm-scopes',
+  ],
   rules: {
     'type-case': [2, 'always', 'lower-case'],
     'subject-max-length': [2, 'always', 95],
@@ -44,7 +47,8 @@ module.exports = {
             emoji: '💎',
           },
           refactor: {
-            description: 'A code change that neither fixes a bug nor adds a feature',
+            description:
+              'A code change that neither fixes a bug nor adds a feature',
             title: 'Code Refactoring',
             emoji: '📦',
           },
@@ -86,7 +90,8 @@ module.exports = {
         description: 'What is the scope of this change , I mean package name',
       },
       subject: {
-        description: 'Write a short, imperative tense description of the change',
+        description:
+          'Write a short, imperative tense description of the change',
       },
       body: {
         description: 'Provide a longer description of the change',

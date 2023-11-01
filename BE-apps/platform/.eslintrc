@@ -1,4 +1,4 @@
 {
-  "root": true,
-  "extends": "@mono/eslint-config-react"
+  // current sub project will use root/.eslintrc
+  "root": false
 }

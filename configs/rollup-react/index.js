@@ -27,7 +27,9 @@ function getConfig(packageJson) {
     plugins: [
       resolve(),
       replace({
-        'process.env.NODE_ENV': JSON.stringify(!PRODUCTION ? 'production' : 'development'),
+        'process.env.NODE_ENV': JSON.stringify(
+          !PRODUCTION ? 'production' : 'development'
+        ),
       }),
       peerDepsExternal(),
       commonjs(),

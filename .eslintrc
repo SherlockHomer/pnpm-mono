@@ -1,3 +1,6 @@
 {
-  "extends": "@mono/eslint-config-react"
+  "extends": ["./configs/eslint-react/.eslintrc"]
+  // 这种写法在 vscode 下 eslint 高亮不生效 
+  // In this way, eslint highlighting does not take effect in vscode.
+  // "extends": ["@mono/eslint-config-react"]
 }

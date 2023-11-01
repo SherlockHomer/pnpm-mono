@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^",
     "@mono/rollup-react": "workspace:^",
     "@mono/tsconfig": "workspace:*",
     "cypress-rollup-preprocessor": "^1.2.0",

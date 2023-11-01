@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^",
     "@mono/tsconfig": "workspace:^",
     "promises-aplus-tests": "^2.1.2"
   },
