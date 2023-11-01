@@ -28,7 +28,6 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^",
     "nodemon": "^3.0.1"
   }
 }

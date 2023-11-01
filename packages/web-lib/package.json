@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^",
     "@mono/tsconfig": "workspace:^",
     "tsup": "^7.0.0"
   }
