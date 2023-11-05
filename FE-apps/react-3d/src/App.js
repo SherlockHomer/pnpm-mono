@@ -1,11 +1,17 @@
 import { Button } from '@mono/web-ui';
 import tap from '@mono/web-lib';
+import ShadowView from './learn/ShadowView';
 import logo from './logo.svg';
 
 import './App.css';
 function App() {
   return (
-    <div className='App'>
+    <div
+      className='App'
+      onClick={() => {
+        console.log('app click');
+      }}
+    >
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <div>I am {tap('from web-lib')}</div>
@@ -18,6 +24,15 @@ function App() {
         >
           Learn React
         </a>
+        <ShadowView>
+          <h2
+            onClick={() => {
+              console.log('shadow dom inner click');
+            }}
+          >
+            shadow dom
+          </h2>
+        </ShadowView>
       </header>
     </div>
   );
