@@ -21,5 +21,7 @@ module.exports = {
     jsx: true,
   },
   plugins: ['vue', 'prettier'],
-  rules: {},
+  rules: {
+    'no-debugger': 'off',
+  },
 };

@@ -28,7 +28,8 @@
   "plugins": ["react", "prettier", "mocha", "cypress"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-debugger":"off"
   },
   "ignorePatterns": ["!.lintstagedrc.js"]
 }

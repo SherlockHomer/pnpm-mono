@@ -1,6 +1,7 @@
 import { Button } from '@mono/web-ui';
 import tap from '@mono/web-lib';
 import ShadowView from './learn/ShadowView';
+import UseEffectTest from './learn/UseEffectTest';
 import logo from './logo.svg';
 
 import './App.css';
@@ -16,6 +17,7 @@ function App() {
         <img src={logo} className='App-logo' alt='logo' />
         <div>I am {tap('from web-lib')}</div>
         <Button>I like using compose in dev! Huzzha!!!</Button>
+        <UseEffectTest />
         <a
           className='App-link'
           href='https://reactjs.org'
