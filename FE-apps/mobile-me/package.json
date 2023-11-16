@@ -1,0 +1,6 @@
+{
+  "name": "@mono/mobile-me",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.11.0"
+  }
+}
