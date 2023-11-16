@@ -13,8 +13,17 @@ function App() {
         console.log('app click');
       }}
     >
-      <header className='App-header'>
+      <header className='header'>
         <img src={logo} className='App-logo' alt='logo' />
+      </header>
+      <div className='mobile-test'>
+        <div>I am div, font-size inherited from body.</div>
+        <div className='remDiv'>
+          I am using rem unit, it&apos;s inhreted from html
+        </div>
+        <div className='remBlock'></div>
+      </div>
+      <section className='App-header'>
         <div>I am {tap('from web-lib')}</div>
         <Button>I like using compose in dev! Huzzha!!!</Button>
         <UseEffectTest />
@@ -35,7 +44,7 @@ function App() {
             shadow dom
           </h2>
         </ShadowView>
-      </header>
+      </section>
     </div>
   );
 }

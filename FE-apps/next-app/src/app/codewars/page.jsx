@@ -15,7 +15,11 @@ const colors = [
   'bg-cyan-300',
 ];
 
-const questions = ['Try to write reduce', 'Try to write inherit', 'Try to write fib in caching'];
+const questions = [
+  'Try to write reduce',
+  'Try to write inherit',
+  'Try to write fib in caching',
+];
 
 export default function CodeWarsPage() {
   return (
