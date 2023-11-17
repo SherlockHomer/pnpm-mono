@@ -9,3 +9,5 @@ css module 能提示，但是经常要写 styles.xxx, 再搭配 common 样式 cl
   className={`row justify-content-center ${styles['global-nav-container']}`}
 ></div>
 ```
+
+https://github.com/csstools/sanitize.css#features
