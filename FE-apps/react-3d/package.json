@@ -42,6 +42,8 @@
     ]
   },
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^"
+    "@mono/eslint-config-react": "workspace:^",
+    "jest": "27.5.1",
+    "jest-environment-jsdom": "27.5.1"
   }
 }
