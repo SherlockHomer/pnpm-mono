@@ -5,6 +5,11 @@
     "node": true,
     "mocha": true // 启用 Mocha 环境
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parserOptions": {
     "ecmaVersion": "latest"
   },
@@ -29,7 +34,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
-    "no-debugger":"off"
+    "no-debugger": "off"
   },
   "ignorePatterns": ["!.lintstagedrc.js"]
 }

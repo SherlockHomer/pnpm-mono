@@ -1,5 +1,12 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+## todo
+
+- [x] 尝试使用 @nx/react 模式
+- [ ] 观察 @nx/react 模式给全局配置和子项目带来的影响，学习 nx/generate 的一些配置思想
+
+## Rules
+
 ### commit rules
 
 - start with revert|feat|fix|docs|dx|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release
