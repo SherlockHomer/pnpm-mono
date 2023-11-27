@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "learn-corejs and test",
   "scripts": {
+    "test": "npm run test:unit",
     "test:promise": "promises-aplus-tests ./src/Promise/index.aplus-tests.js",
     "test:unit": "jest"
   },

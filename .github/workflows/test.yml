@@ -98,9 +98,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Unit test in affected package
-        run: npm run test:affected
-
       - name: Install cypress
         uses: cypress-io/github-action@v6
         with:
@@ -109,7 +106,7 @@ jobs:
           component: true
           start: npm start
 
-      - name: Component test in affected package
-        run: npm run test:comp:affected
+      - name: Unit test in affected package
+        run: npm run test:affected
 
     needs: setup
