@@ -1,3 +1,4 @@
+// 用到 arguments
 (function () {
   /* eslint-disable no-new-wrappers */
   const { deepClone } = require('./Index');

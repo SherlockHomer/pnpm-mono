@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "learn-corejs and test",
   "scripts": {
-    "test:promise": "promises-aplus-tests ./src/Promise/index.test.js"
+    "test:promise": "promises-aplus-tests ./src/Promise/index.aplus-tests.js",
+    "test:unit": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@mono/tsconfig": "workspace:^",
+    "@mono/web-lib": "workspace:^",
+    "jest": "29.4.1",
     "promises-aplus-tests": "^2.1.2"
   },
   "dependencies": {
+    "core-js": "3.33.3",
     "core-js-pure": "^3.33.0"
   }
 }

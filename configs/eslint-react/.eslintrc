@@ -3,7 +3,8 @@
     "browser": true,
     "es2021": true,
     "node": true,
-    "mocha": true // 启用 Mocha 环境
+    "mocha": true, // 启用 Mocha 环境
+    "jest": true
   },
   "settings": {
     "react": {
