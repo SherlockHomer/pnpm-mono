@@ -10,9 +10,6 @@
     "build:affected": "nx affected -t build",
     "test": "nx run-many -t test",
     "test:affected": "nx affected -t test",
-    "test:unit": "nx run-many -t test:unit",
-    "test:unit:affected": "nx affected -t test:unit",
-    "test:comp:affected": "nx affected -t test:comp",
     "docker:mono:container": "docker build . --target mono-dep --tag mono-dep:latest -f ./docker/build.Dockerfile"
   },
   "keywords": [],
