@@ -1,5 +1,5 @@
 name: make our CI/CD powerful
-run-name: Hey, ${{github.actor}}, Let's do it.
+run-name: Hey, ${{github.actor}}.
 
 env:
   NODE_VERSION: 18.18.0
