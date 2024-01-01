@@ -4,9 +4,10 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "esmodules": true
-        }
+        //开启按需polyfill
+        "useBuiltIns": "usage",
+        //使用core-js3.x版本进行确实对象的补全
+        "corejs": 3
       }
     ]
   ]

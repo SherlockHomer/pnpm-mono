@@ -17,6 +17,7 @@
   "devDependencies": {
     "@mono/rollup-react": "workspace:^",
     "@mono/tsconfig": "workspace:*",
+    "core-js": "3",
     "cypress-rollup-preprocessor": "^1.2.0",
     "vite": "^4.4.5"
   },
