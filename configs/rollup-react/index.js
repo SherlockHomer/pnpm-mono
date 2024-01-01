@@ -4,7 +4,7 @@ const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const commonjs = require('@rollup/plugin-commonjs');
 // const sass =  require('node-sass);
 const postcss = require('rollup-plugin-postcss');
-const terser = require('rollup-plugin-terser').terser;
+const terser = require('rollup-plugin-minification').terser;
 const replace = require('rollup-plugin-replace');
 
 const { PRODUCTION } = process.env;
