@@ -7,35 +7,7 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@swc/helpers':
-        specifier: ~0.5.2
-        version: 0.5.3
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-router-dom:
-        specifier: 6.11.2
-        version: 6.11.2(react-dom@18.2.0)(react@18.2.0)
-      tslib:
-        specifier: ^2.3.0
-        version: 2.6.2
     devDependencies:
-      '@babel/cli':
-        specifier: ^7.22.15
-        version: 7.23.4(@babel/core@7.23.6)
-      '@babel/core':
-        specifier: ^7.22.20
-        version: 7.23.6
-      '@babel/preset-env':
-        specifier: ^7.22.20
-        version: 7.23.6(@babel/core@7.23.6)
-      '@babel/preset-react':
-        specifier: ^7.22.15
-        version: 7.23.3(@babel/core@7.23.6)
       '@commitlint/cli':
         specifier: ^17.6.5
         version: 17.8.1
@@ -200,7 +172,7 @@ importers:
         version: 1.32.2
       next:
         specifier: 13.5.4
-        version: 13.5.4(@babel/core@7.23.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18
         version: 18.2.0
@@ -454,6 +426,18 @@ importers:
         specifier: ^6.0.8
         version: 6.1.3(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
+      '@babel/cli':
+        specifier: ^7.22.15
+        version: 7.23.4(@babel/core@7.23.6)
+      '@babel/core':
+        specifier: ^7.22.20
+        version: 7.23.6
+      '@babel/preset-env':
+        specifier: ^7.22.20
+        version: 7.23.6(@babel/core@7.23.6)
+      '@babel/preset-react':
+        specifier: ^7.22.15
+        version: 7.23.3(@babel/core@7.23.6)
       '@mono/rollup-react':
         specifier: workspace:^
         version: link:../../configs/rollup-react
@@ -465,7 +449,7 @@ importers:
         version: 0.1.63(@swc/core@1.3.101)
       '@swc/core':
         specifier: ~1.3.85
-        version: 1.3.101(@swc/helpers@0.5.3)
+        version: 1.3.101
       core-js:
         specifier: '3'
         version: 3.33.3
@@ -4882,11 +4866,6 @@ packages:
       react-router-dom: 6.14.2(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@remix-run/router@1.6.2:
-    resolution: {integrity: sha512-LzqpSrMK/3JBAVBI9u3NWtOhWNw5AMQfrUFYB0+bDHTSw17z++WJLsPsxAuK+oSddsxk4d7F/JcdDPM1M5YAhA==}
-    engines: {node: '>=14'}
-    dev: false
-
   /@remix-run/router@1.7.2:
     resolution: {integrity: sha512-7Lcn7IqGMV+vizMPoEl5F0XDshcdDYtMI6uJLQdQz5CfZAwy3vvGKYSUk789qndt5dEC4HfSjviSYlSoHGL2+A==}
     engines: {node: '>=14'}
@@ -5372,7 +5351,7 @@ packages:
         optional: true
     dependencies:
       '@mole-inc/bin-wrapper': 8.0.1
-      '@swc/core': 1.3.101(@swc/helpers@0.5.3)
+      '@swc/core': 1.3.101
       commander: 7.2.0
       fast-glob: 3.3.2
       semver: 7.5.4
@@ -5470,7 +5449,7 @@ packages:
     dev: true
     optional: true
 
-  /@swc/core@1.3.101(@swc/helpers@0.5.3):
+  /@swc/core@1.3.101:
     resolution: {integrity: sha512-w5aQ9qYsd/IYmXADAnkXPGDMTqkQalIi+kfFf/MHRKTpaOL7DHjMXwPp/n8hJ0qNjRvchzmPtOqtPBiER50d8A==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -5481,7 +5460,6 @@ packages:
         optional: true
     dependencies:
       '@swc/counter': 0.1.2
-      '@swc/helpers': 0.5.3
       '@swc/types': 0.1.5
     optionalDependencies:
       '@swc/core-darwin-arm64': 1.3.101
@@ -5505,11 +5483,6 @@ packages:
     dependencies:
       tslib: 2.6.2
     dev: false
-
-  /@swc/helpers@0.5.3:
-    resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
-    dependencies:
-      tslib: 2.6.2
 
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
@@ -10217,7 +10190,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.38.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.38.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.38.0)
       has: 1.0.4
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -10251,7 +10224,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.38.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.38.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.38.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -16062,7 +16035,7 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /next@13.5.4(@babel/core@7.23.6)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.5.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-+93un5S779gho8y9ASQhb/bTkQF17FNQOtXLKAj3lsNgltEcF0C5PMLLncDmH+8X1EnJH1kbqAERa29nRXqhjA==}
     engines: {node: '>=16.14.0'}
     hasBin: true
@@ -16084,7 +16057,7 @@ packages:
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.1(@babel/core@7.23.6)(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
     optionalDependencies:
       '@next/swc-darwin-arm64': 13.5.4
@@ -18257,19 +18230,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-router-dom@6.11.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-JNbKtAeh1VSJQnH6RvBDNhxNwemRj7KxCzc5jb7zvDSKRnPWIFj9pO+eXqjM69gQJ0r46hSz1x4l9y0651DKWw==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@remix-run/router': 1.6.2
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.11.2(react@18.2.0)
-    dev: false
-
   /react-router-dom@6.14.2(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-5pWX0jdKR48XFZBuJqHosX3AAHjRAzygouMTyimnBPOLdY3WjzUSKhus2FVMihUFWzeLebDgr4r8UeQFAct7Bg==}
     engines: {node: '>=14'}
@@ -18281,16 +18241,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-router: 6.14.2(react@18.2.0)
-    dev: false
-
-  /react-router@6.11.2(react@18.2.0):
-    resolution: {integrity: sha512-74z9xUSaSX07t3LM+pS6Un0T55ibUE/79CzfZpy5wsPDZaea1F8QkrsiyRnA2YQ7LwE/umaydzXZV80iDCPkMg==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      react: '>=16.8'
-    dependencies:
-      '@remix-run/router': 1.6.2
-      react: 18.2.0
     dev: false
 
   /react-router@6.14.2(react@18.2.0):
@@ -19973,7 +19923,7 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /styled-jsx@5.1.1(@babel/core@7.23.6)(react@18.2.0):
+  /styled-jsx@5.1.1(react@18.2.0):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -19986,7 +19936,6 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.23.6
       client-only: 0.0.1
       react: 18.2.0
     dev: false
