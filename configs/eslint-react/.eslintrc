@@ -18,7 +18,8 @@
     "standard",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:cypress/recommended"
+    "plugin:cypress/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "overrides": [
     {
@@ -31,11 +32,12 @@
       }
     }
   ],
-  "plugins": ["react", "prettier", "mocha", "cypress"],
+  "plugins": ["react", "prettier", "mocha", "cypress","react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
     "no-debugger": "off"
+    // "react-hooks/exhaustive-deps": "off"
   },
   "ignorePatterns": ["!.lintstagedrc.js"]
 }
