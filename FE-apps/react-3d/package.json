@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src/**",
+    "lint": "eslint src --ext .js --ext .ts --fix",
     "docker:build:container": "docker build ../../ --target react-3d-ng --tag react-3d-ng:latest -f ./docker/Dockerfile",
     "docker:dev:container": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
   },
