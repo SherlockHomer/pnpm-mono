@@ -7,7 +7,7 @@ module.exports = config({
     web: path.resolve('./src/Index.js'),
   },
   output: {
-    path: path.resolve('./distswc'),
+    path: path.resolve('./dist'),
     name: 'Index.js',
   },
   options: {
