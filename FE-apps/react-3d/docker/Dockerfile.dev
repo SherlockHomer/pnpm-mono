@@ -3,4 +3,4 @@ COPY . /app
 
 FROM mono AS dev-react-3d
 EXPOSE 3000
-CMD [ "npx", "nx", "dev", "@mono/react-3d"]
+CMD [ "npx", "nx", "dev", "react-3d"]

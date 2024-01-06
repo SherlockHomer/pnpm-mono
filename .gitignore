@@ -9,6 +9,7 @@ npm-debug.log*
 # editor
 .vscode/
 .idea/
+.nx
 
 # locks
 package-lock.json

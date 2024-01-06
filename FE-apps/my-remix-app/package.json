@@ -1,5 +1,5 @@
 {
-  "name": "@mono/my-remix-app",
+  "name": "my-remix-app",
   "private": true,
   "sideEffects": false,
   "scripts": {

@@ -5,7 +5,7 @@ COPY . /app
 
 # stage mono 包括所有其他包的源码
 FROM mono AS react-3d
-RUN npx nx build @mono/react-3d
+RUN npx nx build react-3d
 
 
 # Final Stage，只要 react-3d build
