@@ -2,6 +2,15 @@
   "name": "react-3d",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js --ext .ts --fix",
+    "docker:build:container": "docker build ../../ --target react-3d-ng --tag react-3d-ng:latest -f ./docker/Dockerfile",
+    "docker:dev:container": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
+  },
   "dependencies": {
     "@mono/web-lib": "workspace:^",
     "@mono/web-ui": "workspace:^",
@@ -13,15 +22,6 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false",
-    "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js --ext .ts --fix",
-    "docker:build:container": "docker build ../../ --target react-3d-ng --tag react-3d-ng:latest -f ./docker/Dockerfile",
-    "docker:dev:container": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
   },
   "browserslist": {
     "production": [
@@ -35,14 +35,9 @@
       "last 1 safari version"
     ]
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@mono/eslint-config-react"
-    ]
-  },
   "devDependencies": {
     "@mono/eslint-config-react": "workspace:^",
+    "@mono/typescript-config": "workspace:^",
     "jest": "27.5.1",
     "jest-environment-jsdom": "27.5.1",
     "typescript": "4"

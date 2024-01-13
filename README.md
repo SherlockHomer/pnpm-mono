@@ -43,3 +43,9 @@ find mismatches version in every package.json of subpackages & fix them, be care
 > install it in root project avoid install cypress binary twice but sometimes when you need to use ci, you can use `npm install --ignore-scripts` to aviod cypress postinstall
 
 when you use cypress in your subpackage, you may need this. add this in your tsconfig.json `"compilerOptions": {     "types": ["cypress"] }`
+
+## issue
+
+### package name
+
+@mono/tsconfig ❌，会忽略本地

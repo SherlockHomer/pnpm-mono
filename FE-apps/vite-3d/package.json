@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@mono/eslint-config-vue": "workspace:^",
-    "@mono/tsconfig": "workspace:^",
+    "@mono/typescript-config": "workspace:^",
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.5"
   }

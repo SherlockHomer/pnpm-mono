@@ -1,5 +1,5 @@
 /* eslint-disable no-throw-literal */
-export function reduce(arr, callbackFn, init) {
+function reduce(arr, callbackFn, init) {
   if (Object.prototype.toString.call(arr) !== '[object Array]') {
     throw 'func show be called by array';
   }
@@ -10,3 +10,5 @@ export function reduce(arr, callbackFn, init) {
   }
   return result;
 }
+
+export { reduce };
