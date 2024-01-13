@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['standard', 'plugin:vue/vue3-essential', 'prettier'],
+  extends: ['plugin:vue/vue3-essential', 'prettier'],
   overrides: [
     {
       env: {

@@ -1,5 +1,9 @@
 {
-  "name": "@mono/tsconfig",
+  "name": "@mono/typescript-config",
   "discription": "common tsconfig",
-  "main": "tsup.config.json"
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

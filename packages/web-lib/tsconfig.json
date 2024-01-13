@@ -1,4 +1,4 @@
 // 使用 tsup，该配置忽略
 {
-  "extends": "@mono/tsconfig/tsconfig.json"
+  "extends": "@mono/typescript-config/base.json"
 }

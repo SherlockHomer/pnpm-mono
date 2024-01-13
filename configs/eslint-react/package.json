@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "eslint config for monorepo projects which write react code",
-  "main": ".eslintrc",
+  "main": "library.js",
   "scripts": {
     "test": "echo 'create some tests, please'"
   },
@@ -11,30 +11,39 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "@vercel/style-guide": "^5.1.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^2.5.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "eslint": "^8.38.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "@vercel/style-guide": "^5.1.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^2.5.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "typescript": "^5.3.3"
   }
 }
