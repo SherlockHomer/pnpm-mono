@@ -1,6 +1,13 @@
-function getFps(callback: (fps: number) => void) {
+/**
+ *  * use it to create a loop for calc fps
+ *
+ * @param {(fps: number) => void} callback
+ * @returns fn to break loop
+ */
+function getFPS(callback: (fps: number) => void) {
   let prevTime = +new Date();
   let frames = 0;
+  let open = true;
   requestAnimationFrame(function loop() {
     let now = +new Date();
     frames++;
@@ -8,11 +15,16 @@ function getFps(callback: (fps: number) => void) {
       const fps = Math.round((frames * 1000) / (now - prevTime));
       prevTime = now;
       callback(fps);
-      console.log(4555);
       frames = 0;
     }
-    requestAnimationFrame(loop);
+    if (open) {
+      requestAnimationFrame(loop);
+    }
   });
+  const closeFn = function () {
+    open = false;
+  };
+  return closeFn;
 }
 
-export { getFps };
+export { getFPS };

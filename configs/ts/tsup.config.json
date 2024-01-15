@@ -1,9 +1,12 @@
 {
-  "format": ["esm", "cjs"],
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "format": ["cjs"],
   "sourcemap": true,
   "clean": true,
   "outDir": "dist",
   "entry": ["src/Index.tsx"],
   "dts": true,
-  "legacyOutput": true
+  "legacyOutput": true,
+  "treeshake": true,
+  "external": ["react", "react-dom", "react-scripts"]
 }

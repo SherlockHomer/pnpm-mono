@@ -1,4 +1,4 @@
 // 使用 tsup，该配置忽略
 {
-  "extends": "@mono/typescript-config/base.json"
+  "extends": "@mono/typescript-config/react-library.json"
 }

@@ -1,6 +1,3 @@
-import tap from './log/tap';
-import { getFps } from './animation/fps/Index';
+export { tap } from './log/tap';
 
-export default tap;
-export { getFps };
-export const a = new Promise(() => {});
+export { getFPS } from './animation/fps/Index';

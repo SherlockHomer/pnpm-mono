@@ -1,8 +1,11 @@
 import { defineConfig } from 'tsup';
-import config from '@mono/typescript-config/tsup.config.json';
+import config from '@mono/typescript-config/tsup.config.json' assert { type: 'json' };
 
 export default defineConfig({
   ...config,
-  entry: ['src/Index.js', 'src/**/Index.(js|ts)'],
-  format: ['esm', 'cjs'],
+  // src/* 一层路径
+  // src/** n 层路径
+  // 该项目 src 第一层中每个文件一个模块
+  entry: ['src/Index.js', 'src/*/Index.(js|ts)'],
+  format: ['cjs'],
 });

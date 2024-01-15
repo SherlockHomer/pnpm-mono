@@ -1,15 +1,12 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useEffect, useRef } from 'react';
 
-class ShadowView extends React.Component {
-  constructor() {
-    super();
-    this.attachShadowRef = React.createRef();
-  }
+// Shadow dom lost click event，原生执行的话 document 会转给 Shadow
+// React 下不会
+function ShadowView({ children }) {
+  const nodeRef = useRef(null);
 
-  componentDidMount() {
-    const host = this.attachShadowRef.current;
+  useEffect(() => {
+    const host = nodeRef.current;
     //  <React.StrictMode> 导致 无法直接挂在 host 上
     const root = document.createElement('div');
     if (host) {
@@ -20,15 +17,10 @@ class ShadowView extends React.Component {
       });
     }
     host.appendChild(root);
-  }
+    return () => {};
+  }, []);
 
-  render() {
-    return <div ref={this.attachShadowRef}>{this.props.children}</div>;
-  }
+  return <div ref={nodeRef}>{children}</div>;
 }
-
-ShadowView.propTypes = {
-  children: PropTypes.node,
-};
 
 export default ShadowView;

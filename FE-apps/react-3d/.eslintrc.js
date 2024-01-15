@@ -6,4 +6,11 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  env: {
+    jest: true,
+  },
+  globals: {
+    // 忽略 env browser window.screen
+    screen: 'off',
+  },
 };

@@ -1,12 +1,8 @@
-import React, { useRef, useEffect, useLayoutEffect } from 'react';
+import { useRef, useEffect, useLayoutEffect } from 'react';
 
 const UseEffectTest = () => {
   const inputRef = useRef(null);
-  useEffect(() => {
-    console.log('useEffect is after useLayoutEffect');
-    inputRef.current.value = 'another user';
-  });
-
+  // useLayoutEffect 先于 useEffect 执行
   useLayoutEffect(() => {
     // DOM 突变之后和浏览器绘制新更改之前同步触发
     // it fires synchronously after all DOM mutations.
@@ -15,6 +11,12 @@ const UseEffectTest = () => {
     console.log('useLayoutEffect first');
     console.log(inputRef.current.value);
   });
+
+  useEffect(() => {
+    console.log('useEffect is after useLayoutEffect');
+    inputRef.current.value = 'another user';
+  });
+
   return (
     <div>
       <input type='text' ref={inputRef} />
