@@ -5,4 +5,4 @@ const tap = (x, fn = (x) => x) => {
   return x;
 };
 
-export default tap;
+export { tap };

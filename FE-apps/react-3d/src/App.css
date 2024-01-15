@@ -15,23 +15,12 @@ body {
 .header {
   text-align: left;
 }
-.mobile-test {
-  color: #fff;
-  margin-bottom: 50px;
-}
-
-.remDiv {
-  font-size: 1rem;
-}
-.remBlock {
-  width: 1rem;
-  background: #000;
-  height: 1rem;
-  border: 1px solid #fff;
-}
 
 .App-logo {
-  height: 10vmin;
+  width: 8vmin;
+  height: 8vmin;
+  min-width: 80px;
+  min-height: 80px;
   pointer-events: none;
   text-align: left;
 }
