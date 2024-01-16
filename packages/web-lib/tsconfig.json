@@ -1,4 +1,8 @@
-// 使用 tsup，该配置忽略
 {
-  "extends": "@mono/typescript-config/react-library.json"
+  "extends": "@mono/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
