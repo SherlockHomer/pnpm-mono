@@ -46,6 +46,10 @@ when you use cypress in your subpackage, you may need this. add this in your tsc
 
 ## issue
 
+### @mono-> @repo
+
+原有的 @mono 会引起 @mono/eslint-config-react 在 npm 库中找寻而导致超时
+
 ### package name
 
-@mono/tsconfig ❌，会忽略本地
+@repo/tsconfig ❌，会忽略本地

@@ -13,8 +13,8 @@
     "docker:dev:container": "docker build ../../ --target dev-react-3d --tag dev-react-3d:latest -f ./docker/Dockerfile.dev"
   },
   "dependencies": {
-    "@mono/web-lib": "workspace:^",
-    "@mono/web-ui": "workspace:^",
+    "@repo/web-lib": "workspace:^",
+    "@repo/web-ui": "workspace:^",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -37,8 +37,8 @@
     ]
   },
   "devDependencies": {
-    "@mono/eslint-config-react": "workspace:^",
-    "@mono/typescript-config": "workspace:^",
+    "@repo/eslint-config-react": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "jest": "27.5.1",

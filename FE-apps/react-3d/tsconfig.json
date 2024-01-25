@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/typescript-config/base.json",
+  "extends": "@repo/typescript-config/base.json",
   "include": ["src"],
   "exclude": ["node_modules"],
   "compilerOptions": {
@@ -7,6 +7,6 @@
     "moduleResolution": "Bundler",
     "allowJs": true,
     "jsx": "preserve",
-    "noEmit": true
-  }
+    "noEmit": true,
+  },
 }

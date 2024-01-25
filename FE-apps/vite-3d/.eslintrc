@@ -1,5 +1,5 @@
 {
   "root": true,
-  "extends": "@mono/eslint-config-vue/.eslintrc.js",
+  "extends": "@repo/eslint-config-vue/.eslintrc.js",
   "rules": {}
 }

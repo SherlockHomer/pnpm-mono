@@ -2,7 +2,7 @@
 
 - library.js for lib
 - next.js for nextjs project
-- react-internal.js for normal react project
+- react-internal.js a custom ESLint configuration for use with internal (bundled by their consumer)
 
 ## Todos
 

@@ -1,4 +1,4 @@
-import { Button } from "@mono/web-ui";
+import { Button } from '@repo/web-ui';
 
 export default function Index() {
   return (

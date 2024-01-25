@@ -1,4 +1,4 @@
-// import { tap } from '@mono/web-lib';
+// import { tap } from '@repo/web-lib';
 import FpsPanel from './component/fpsPanel';
 import EarthAndMoon from './component/animation/earthAndMoon';
 import logo from './logo.svg';

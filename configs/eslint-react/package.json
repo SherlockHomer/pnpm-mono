@@ -1,5 +1,5 @@
 {
-  "name": "@mono/eslint-config-react",
+  "name": "@repo/eslint-config-react",
   "private": true,
   "version": "1.0.0",
   "description": "eslint config for monorepo projects which write react code",

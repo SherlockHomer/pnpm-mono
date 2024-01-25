@@ -1,5 +1,5 @@
 {
-  "name": "@mono/web-lib",
+  "name": "@repo/web-lib",
   "version": "1.0.0",
   "description": "write some usefully common funcs",
   "main": "dist/Index.js",
@@ -16,7 +16,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mono/typescript-config": "workspace:^",
+    "@repo/eslint-config-react": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "@swc/cli": "~0.1.62",
     "@swc/core": "~1.3.85",
     "@types/react": "^18.2.47",

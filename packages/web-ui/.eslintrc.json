@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": ["@repo/eslint-config-react/library.js"],
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "no-extend-native": "off",
+    "no-throw-literal": "warn"
+  }
+}

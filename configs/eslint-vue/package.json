@@ -1,5 +1,5 @@
 {
-  "name": "@mono/eslint-config-vue",
+  "name": "@repo/eslint-config-vue",
   "private": true,
   "version": "1.0.0",
   "description": "eslint config for monorepo projects which write vue code",
