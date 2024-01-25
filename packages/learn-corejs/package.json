@@ -1,5 +1,5 @@
 {
-  "name": "@mono/learn-corejs",
+  "name": "@repo/learn-corejs",
   "version": "1.0.0",
   "description": "learn-corejs and test",
   "scripts": {
@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@mono/typescript-config": "workspace:^",
-    "@mono/web-lib": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@repo/web-lib": "workspace:^",
     "jest": "29.4.1",
     "promises-aplus-tests": "^2.1.2"
   },

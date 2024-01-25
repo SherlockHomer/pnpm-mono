@@ -1,5 +1,5 @@
 import { defineConfig } from 'tsup';
-import config from '@mono/typescript-config/tsup.config.json' assert { type: 'json' };
+import config from '@repo/typescript-config/tsup.config.json' assert { type: 'json' };
 
 export default defineConfig({
   ...config,

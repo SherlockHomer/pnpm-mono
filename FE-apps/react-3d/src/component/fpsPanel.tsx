@@ -1,4 +1,5 @@
-import { useFPS } from '@mono/web-lib/dist/hooks/Index';
+import React from 'react';
+import { useFPS } from '@repo/web-lib/dist/hooks/Index';
 import './fpsPanel.css';
 
 export default function fpsPanel(): JSX.Element {

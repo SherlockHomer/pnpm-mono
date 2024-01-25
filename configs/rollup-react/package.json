@@ -1,5 +1,5 @@
 {
-  "name": "@mono/rollup-react",
+  "name": "@repo/rollup-react",
   "version": "1.0.0",
   "description": "common rollup config for react",
   "main": "index.js",

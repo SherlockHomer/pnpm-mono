@@ -1,30 +1,19 @@
-// import { tap } from '@mono/web-lib';
-import { useState } from 'react';
+// import { tap } from '@repo/web-lib';
 import FpsPanel from './component/fpsPanel';
-import ShadowView from './learn/ShadowView';
+import EarthAndMoon from './component/animation/earthAndMoon';
 import logo from './logo.svg';
 
 import './App.css';
 
 function App() {
-  const [txt, changeText] = useState('');
   return (
     <div className='App'>
       <header className='header'>
         <img src={logo} className='App-logo' alt='logo' />
       </header>
       <main>
-        <input value={txt} onChange={(e) => changeText(e.target.value)} />
         <FpsPanel />
-        <ShadowView>
-          <div
-            onClick={() => {
-              console.log('shadow');
-            }}
-          >
-            {txt}
-          </div>
-        </ShadowView>
+        <EarthAndMoon />
       </main>
     </div>
   );

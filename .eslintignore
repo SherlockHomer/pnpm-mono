@@ -1,12 +1,11 @@
 # 注意 ：去掉该文件后， esm 下文件不会爆红
-/node_modules
-/dist
+# /node_modules
+# /dist
 /doc
-**/dist
-**/build
-**/esm
-**/node_modules
-
+# **/dist
+# **/build
+# **/esm
+# **/node_modules
 
 # 待定
 # tsconfig.json
