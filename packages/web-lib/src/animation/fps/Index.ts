@@ -9,7 +9,7 @@ function getFPS(callback: (fps: number) => void) {
   let frames = 0;
   let open = true;
   requestAnimationFrame(function loop() {
-    let now = +new Date();
+    const now = +new Date();
     frames++;
     if (now > prevTime + 1000) {
       const fps = Math.round((frames * 1000) / (now - prevTime));

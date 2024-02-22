@@ -1,10 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { resolve } = require('node:path');
 
 const project = resolve(process.cwd(), 'tsconfig.json');
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
   globals: {
     React: true,
     JSX: true,
