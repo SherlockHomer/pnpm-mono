@@ -1,0 +1,28 @@
+{
+  "name": "@repo/learn-btc",
+  "version": "1.0.0",
+  "description": "learn btc",
+  "main": "utxo/collect.js",
+  "type": "module",
+  "scripts": {
+    "start": "node utxo/collect.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mempool/mempool.js": "^2.3.0",
+    "@noble/curves": "^1.6.0",
+    "@repo/eslint-config-react": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@scure/base": "^1.1.9",
+    "@scure/btc-signer": "^1.0.0",
+    "axios": "^1.7.2",
+    "bip32": "^4.0.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "bs58": "^6.0.0",
+    "ecpair": "^2.1.0",
+    "ethers": "^6.11.1",
+    "tiny-secp256k1": "^2.2.3"
+  }
+}

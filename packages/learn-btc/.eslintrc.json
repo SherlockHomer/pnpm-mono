@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [
+    "@repo/eslint-config-react/library.js"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "root": true,
+  "rules": {
+    "no-extend-native": "off",
+    "no-throw-literal": "warn"
+  }
+}
