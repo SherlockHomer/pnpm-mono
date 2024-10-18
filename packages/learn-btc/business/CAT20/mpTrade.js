@@ -3,21 +3,20 @@ import { ECPairFactory } from 'ecpair';
 import * as ecc from 'tiny-secp256k1';
 import { hex } from '@scure/base';
 import * as btc from '@scure/btc-signer';
-import mempoolJS from '@mempool/mempool.js';
-import { tapTweakHash, tweakKey } from 'bitcoinjs-lib/src/payments/bip341.js';
+// import mempoolJS from '@mempool/mempool.js';
+import { tapTweakHash } from 'bitcoinjs-lib/src/payments/bip341.js';
 import { schnorr } from '@noble/curves/secp256k1';
-import bs58 from 'bs58';
-import accounts, { getAccountByLabel } from '../../config/accounts.js';
+import { getAccountByLabel } from '../../config/accounts.js';
 
 bitcoin.initEccLib(ecc);
 const ECPair = ECPairFactory(ecc);
-const {
-  bitcoin: { addresses, transactions },
-} = mempoolJS({
-  // hostname: "mempool.space",
-  hostname: 'mempool-testnet.fractalbitcoin.io',
-  // network: 'signet',
-});
+// const {
+//   bitcoin: { addresses, transactions },
+// } = mempoolJS({
+//   // hostname: "mempool.space",
+//   hostname: 'mempool-testnet.fractalbitcoin.io',
+//   // network: 'signet',
+// });
 
 const toXOnly = (pubKey) =>
   pubKey.length === 32 ? pubKey : pubKey.slice(1, 33);
@@ -32,11 +31,6 @@ const fromInternalKey = ECPair.fromWIF(wif, network);
 const tapInternalKey = ECPair.fromWIF(wif, network);
 // commit接收方，reveal发送方密钥对
 const leafKey = ECPair.fromWIF(wif, network);
-
-console.log(
-  'from internal key... base58',
-  bs58.encode(fromInternalKey.privateKey)
-);
 
 // 1. 通过密钥拿到发送方地址
 // pubkey: c74620836231d756058bebf18077552989a854c2b2b1f50213c97b0f64f62c3f
@@ -128,12 +122,8 @@ console.log('publicKey...', publicKey);
 const tweak = tapTweakHash(publicKey);
 const tweakNumber = schnorr.utils.bytesToNumberBE(tweak);
 
-// 85872fbf31bea8d365621cffa4bcaa5317b08cf6d98e1ae56e845d514ec77646
-// 60396462751986359171193939973871084614663875595881269682890002775429104498246n
-// 111545578546853187831167941068473045852421314639163116074231878411944144571813n
 console.log('tweak...', tweak.toString('hex'), tweakNumber);
 
-// 47454415993620428488272623094353124491550206837795218198974365723982423787138n
 // const seckey = fromInternalKey.privateKey;
 
 // for normal utxo
@@ -145,10 +135,6 @@ console.log('tweakKeypair...', hex.encode(tweakKeypair.privateKey));
 
 const fromKeypair = tweakKeypair;
 // const fromKeypair = ECPair.fromPrivateKey(Buffer.from(tweakedPrivateKey), { network });
-console.log(
-  'fromKeypair.privateKey base58:',
-  bs58.encode(fromKeypair.privateKey)
-);
 
 // bitcoin.payments.p2tr({
 //   internalPubkey: toXOnly(tweakKeypair.publicKey),
@@ -171,11 +157,10 @@ console.log(tx, txHex);
 const txid = '95afc5d7450bff8c5f1c9d37425adbe738436486ba6c5741e75c421469b9853b';
 
 // todo: how to get internalPubkey here
-const { output: guardFeeOutput, internalPubkey: guardFeeInternalPubkey } =
-  bitcoin.payments.p2tr({
-    address: guardFeeAddr,
-    network,
-  });
+const { output: guardFeeOutput } = bitcoin.payments.p2tr({
+  address: guardFeeAddr,
+  network,
+});
 // 11. 创建reveal交易
 const guard_commit_psbt = new bitcoin.Psbt({ network });
 guard_commit_psbt.addInput({
@@ -242,8 +227,9 @@ guard_commit_psbt.addOutput({
   value: guard_commit_charge,
   address: fromAddress,
 });
+console.log('unsigned guard_commit_psbt:', guard_commit_psbt.toHex());
 
-// 13. 使用commit交易接收方密钥对签名，这里签名时对应scriptTree中的OP_CHECKSIG参数
+// 13. 使用commit交易接收方密钥对签名，这里签名时对应scriptTree中的 OP_CHECKSIG 参数
 guard_commit_psbt.signInput(0, leafKey);
 guard_commit_psbt.finalizeAllInputs();
 const guard_commit_tx = guard_commit_psbt.extractTransaction();
@@ -253,7 +239,7 @@ const guard_commit_txHex = guard_commit_rawTx.toString('hex');
 console.log('guard_commit_txHex...', guard_commit_txHex);
 
 const guard_commit_txid =
-  '66d3b6eea95b48cd69c907f3123cced976821c0432e7eaaf22cb95239c8eefdc';
+  '5c36dc1fdf006dab16706a8c01027e28e3d31dc077d8fc59a315f382ac7daff2';
 
 // 15. guard reveal tx
 // from user
@@ -324,6 +310,7 @@ guard_reveal_psbt.addOutput({
   tapInternalKey: toXOnly(leafKey.publicKey),
 });
 
+console.log('unsigned guard_reveal_psbt:', guard_reveal_psbt.toHex());
 guard_reveal_psbt.signInput(0, fromKeypair); // guard reveal token input
 guard_reveal_psbt.signInput(1, leafKey); // guard reveal input
 guard_reveal_psbt.signInput(2, fromKeypair); // guard reveal fee input
