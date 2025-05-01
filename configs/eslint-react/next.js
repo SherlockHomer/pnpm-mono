@@ -8,6 +8,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'prettier',
     require.resolve('@vercel/style-guide/eslint/next'),
   ],
@@ -18,6 +20,7 @@ module.exports = {
   env: {
     node: true,
     browser: true,
+    jest: true,
   },
   settings: {
     'import/resolver': {
@@ -25,11 +28,43 @@ module.exports = {
         project,
       },
     },
+    react: {
+      version: 'detect',
+    },
   },
   ignorePatterns: [
     // Ignore dotfiles
     '.*.js',
     'node_modules/',
+    'jest.config.js',
+    '.next/',
+    'next.config.js',
+    'out/',
+    'coverage/',
   ],
-  overrides: [{ files: ['*.js?(x)', '*.ts?(x)'] }],
+  overrides: [
+    {
+      files: ['*.js?(x)', '*.ts?(x)'],
+    },
+    {
+      files: ['**/__tests__/**/*', '**/*.{test,spec}.{ts,tsx,js,jsx}'],
+      env: {
+        jest: true,
+      },
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
+  ],
+  rules: {
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        args: 'none',
+        ignoreRestSiblings: true,
+      },
+    ],
+    'react/react-in-jsx-scope': 'off',
+  },
 };

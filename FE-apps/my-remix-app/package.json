@@ -9,14 +9,14 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@repo/web-ui": "workspace:*",
     "@remix-run/css-bundle": "^1.17.1",
     "@remix-run/node": "^1.17.1",
     "@remix-run/react": "^1.17.1",
     "@remix-run/serve": "^1.17.1",
+    "@repo/web-ui": "workspace:*",
     "isbot": "^3.6.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.17.1",
@@ -24,7 +24,7 @@
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "eslint": "8.38.0",
-    "typescript": "^5.0.4"
+    "typescript": "5.8.3"
   },
   "engines": {
     "node": ">=14.0.0"

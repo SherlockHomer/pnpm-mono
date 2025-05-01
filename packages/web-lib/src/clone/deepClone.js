@@ -98,4 +98,4 @@ function deepClone(target, wm = new WeakMap()) {
   return clone;
 }
 
-module.exports = deepClone;
+export { deepClone };
