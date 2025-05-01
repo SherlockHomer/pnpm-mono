@@ -1,10 +1,10 @@
-const { defineConfig } = require('cypress');
-const rollupPreprocessor = require('cypress-rollup-preprocessor');
-const rollupConfig = require('./rollup.config');
+import { defineConfig } from 'cypress';
+import rollupPreprocessor from 'cypress-rollup-preprocessor';
+import rollupConfig from './rollup.config.js';
 
 const { outputOptions, ...inputOptions } = rollupConfig;
 
-module.exports = defineConfig({
+export default defineConfig({
   fixturesFolder: false,
   video: false,
   screenshotOnRunFailure: false,
