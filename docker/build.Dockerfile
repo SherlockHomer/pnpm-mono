@@ -1,5 +1,5 @@
 # install again when src codes has been changed is wasteful
-FROM node:18.18.0-slim AS base-package-config
+FROM node:22.12.0-slim AS base-package-config
 WORKDIR /app-config
 # move all package.json
 RUN --mount=type=bind,target=/docker-context \
@@ -10,8 +10,8 @@ COPY ./pnpm-lock.yaml /app-config
 COPY ./pnpm-workspace.yaml /app-config
 
 
-FROM node:18.18.0-slim AS mono-dep
-ARG PNPM_VERSION=8.6.2
+FROM node:22.12.0-slim AS mono-dep
+ARG PNPM_VERSION=8.14.3
 RUN npm --no-update-notifier install -g pnpm@${PNPM_VERSION}
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
