@@ -6,6 +6,7 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  ignorePatterns: ['__mocks__/styleMock.js', '__mocks__/fileMock.js'],
   env: {
     jest: true,
   },
