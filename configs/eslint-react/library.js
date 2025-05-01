@@ -38,6 +38,7 @@ module.exports = {
     'dist/',
     'jest.config.js',
     'coverage/',
+    'cypress.config.js',
   ],
   overrides: [
     {
