@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "learn btc",
   "main": "utxo/collect.js",
-  "type": "module",
   "scripts": {
     "start": "node utxo/collect.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint utxo business util config"
   },
   "author": "",
   "license": "ISC",

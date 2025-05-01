@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import * as React from 'react';
 // https://github.com/styled-components/styled-components/issues/738
 // import styled from 'styled-components/dist/styled-components.js';

@@ -1,11 +1,10 @@
-/* eslint-disable no-unused-vars */
 // basic type
 const UNDEFINED_TYPE = '[object Undefined]';
 const NULL_TYPE = '[object Null]';
-const NUMBER_TYPE = '[object Number]';
-const STRING_TYPE = '[object String]';
-const BOOLEAN_TYPE = '[object Boolean]';
-const BIGINT_TYPE = '[object BigInt]';
+// const NUMBER_TYPE = '[object Number]';
+// const STRING_TYPE = '[object String]';
+// const BOOLEAN_TYPE = '[object Boolean]';
+// const BIGINT_TYPE = '[object BigInt]';
 const SYMBOL_TYPE = '[object Symbol]';
 
 // not deep type
@@ -43,7 +42,7 @@ const cloneNormalTarget = function (target) {
   }
   if (type === FUNCTION_TYPE) {
     // 箭头函数 also
-    // eslint-disable-next-line no-new-func
+
     return new Function('return ' + target.toString())();
   }
   if (type === REGEXP_TYPE) {

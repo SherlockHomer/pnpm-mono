@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import bitcoin from 'bitcoinjs-lib';
 
 const network = bitcoin.networks.bitcoin;

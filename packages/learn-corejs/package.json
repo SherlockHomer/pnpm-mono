@@ -5,7 +5,8 @@
   "scripts": {
     "test": "npm run test:unit",
     "test:promise": "promises-aplus-tests ./src/Promise/index.aplus-tests.js",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "lint": "eslint src"
   },
   "keywords": [],
   "author": "",

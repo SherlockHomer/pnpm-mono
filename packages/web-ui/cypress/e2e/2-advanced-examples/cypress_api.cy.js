@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 /// <reference types="cypress" />
 
 context('Cypress APIs', () => {
@@ -20,7 +19,7 @@ context('Cypress APIs', () => {
           // and the commands arguments are shifted
 
           // allow us to change the console method used
-          method = method || 'log';
+          method ||= 'log';
 
           // log the subject to the console
           console[method]('The subject is', subject);
@@ -141,7 +140,10 @@ context('Cypress APIs', () => {
 
       // get all environment variable
       expect(Cypress.env()).to.have.property('host', 'veronica.dev.local');
-      expect(Cypress.env()).to.have.property('api_server', 'http://localhost:8888/v2/');
+      expect(Cypress.env()).to.have.property(
+        'api_server',
+        'http://localhost:8888/v2/'
+      );
     });
   });
 
@@ -185,7 +187,11 @@ context('Cypress APIs', () => {
     it('Get current spec information', () => {
       // https://on.cypress.io/spec
       // wrap the object so we can inspect it easily by clicking in the command log
-      cy.wrap(Cypress.spec).should('include.keys', ['name', 'relative', 'absolute']);
+      cy.wrap(Cypress.spec).should('include.keys', [
+        'name',
+        'relative',
+        'absolute',
+      ]);
     });
   });
 });

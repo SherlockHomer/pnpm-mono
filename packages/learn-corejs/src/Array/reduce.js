@@ -1,4 +1,3 @@
-/* eslint-disable no-throw-literal */
 function reduce(arr, callbackFn, init) {
   if (Object.prototype.toString.call(arr) !== '[object Array]') {
     throw 'func show be called by array';

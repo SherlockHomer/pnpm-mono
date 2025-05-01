@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { resolve } = require('node:path');
 
 const project = resolve(process.cwd(), 'tsconfig.json');
@@ -18,7 +17,6 @@ module.exports = {
   },
   env: {
     node: true,
-    mocha: true, // 启用 Mocha 环境
     jest: true,
   },
   settings: {

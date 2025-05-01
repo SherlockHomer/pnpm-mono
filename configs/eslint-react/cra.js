@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { resolve } = require('node:path');
 
 const project = resolve(process.cwd(), 'tsconfig.json');
@@ -63,5 +62,13 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
+    // ESLint 9特有的规则
+    'no-fallthrough': 'error',
+    'no-constant-binary-expression': 'error',
+    'logical-assignment-operators': [
+      'warn',
+      'always',
+      { enforceForIfStatements: true },
+    ],
   },
 };
