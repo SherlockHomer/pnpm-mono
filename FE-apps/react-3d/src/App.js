@@ -8,10 +8,10 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <header className='header'>
+      <header className='header' role='banner'>
         <img src={logo} className='App-logo' alt='logo' />
       </header>
-      <main>
+      <main role='main'>
         <FpsPanel />
         <EarthAndMoon />
       </main>

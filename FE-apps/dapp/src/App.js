@@ -35,7 +35,7 @@ function App() {
     }
   }, [web3Status]);
 
-  function auth() {
+  function auth () {
     initWeb3().then((status) => {
       setWeb3(status);
     });
