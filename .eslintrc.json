@@ -1,9 +1,35 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc",
-  "ignorePatterns": ["BE-apps/**", "FE-apps/**", "packages/**"],
+  "root": true,
   "extends": ["@repo/eslint-config-react/library.js"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/FE-apps/*/**/*.{ts,tsx,js,jsx}"],
+      "extends": ["@repo/eslint-config-react/library.js"]
+    },
+    {
+      "files": ["**/BE-apps/*/**/*.{ts,js}"],
+      "extends": ["@repo/eslint-config-react/library.js"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["**/packages/*/**/*.{ts,tsx,js,jsx}"],
+      "extends": ["@repo/eslint-config-react/library.js"]
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    "coverage/",
+    ".next/",
+    "**/*.d.ts"
+  ]
 }

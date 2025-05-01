@@ -36,7 +36,10 @@
     "nx": "^16.10.0",
     "nx-cloud": "^16.5.2",
     "prettier": "^3.2.1",
-    "syncpack": "^11.2.1"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "syncpack": "^11.2.1",
+    "typescript": "5.8.3"
   },
   "config": {
     "commitizen": {
@@ -47,9 +50,11 @@
     "node": ">=22.12.0"
   },
   "packageManager": "pnpm@8.14.3",
-  "resolutions": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "typescript": "5.8.3"
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "typescript": "5.8.3"
+    }
   }
 }
