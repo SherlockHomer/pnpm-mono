@@ -3,7 +3,7 @@ run-name: Hey, ${{github.actor}}.
 
 env:
   NODE_VERSION: 22.12.0
-  PNPM_VERSION: 8.14.3
+  PNPM_VERSION: 10.10.0
 
 # trunk-based way
 on:
