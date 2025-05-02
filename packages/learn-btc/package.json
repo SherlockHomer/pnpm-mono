@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mempool/mempool.js": "^2.3.0",
+    "@mempool/mempool.js": "^3.0.0",
     "@noble/curves": "^1.6.0",
     "@repo/eslint-config-react": "workspace:^",
     "@repo/typescript-config": "workspace:^",
