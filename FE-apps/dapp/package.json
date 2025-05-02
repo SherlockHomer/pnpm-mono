@@ -17,7 +17,8 @@
     "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "DISABLE_ESLINT_PLUGIN=true CI=true react-scripts test --passWithNoTests --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,6 @@
     "@repo/typescript-config": "workspace:^",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "typescript": "5.8.3"
+    "typescript": "5.5.3"
   }
 }

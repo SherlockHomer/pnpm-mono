@@ -11,7 +11,7 @@ COPY ./pnpm-workspace.yaml /app-config
 
 
 FROM node:22.12.0-slim AS mono-dep
-ARG PNPM_VERSION=8.14.3
+ARG PNPM_VERSION=10.10.0
 RUN npm --no-update-notifier install -g pnpm@${PNPM_VERSION}
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"

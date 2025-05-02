@@ -10,7 +10,8 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "build:spack": "rm -rf dist/* && spack",
-    "build:swc": "rm -rf dist && swc ./src/Index.js -d dist --config-file .swcrc.json"
+    "build:swc": "rm -rf dist && swc ./src/Index.js -d dist --config-file .swcrc.json",
+    "lint": "eslint src"
   },
   "keywords": [],
   "author": "",

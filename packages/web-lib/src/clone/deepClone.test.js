@@ -37,7 +37,6 @@ const objects = {
 
 objects.arrays.length = 3;
 
-// eslint-disable-next-line no-unused-vars
 // const uncloneable = {
 //   'DOM elements': body,
 //   functions: Foo,

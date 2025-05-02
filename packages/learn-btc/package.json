@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "learn btc",
   "main": "utxo/collect.js",
-  "type": "module",
   "scripts": {
     "start": "node utxo/collect.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint utxo business util config"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mempool/mempool.js": "^2.3.0",
+    "@mempool/mempool.js": "^3.0.0",
     "@noble/curves": "^1.6.0",
     "@repo/eslint-config-react": "workspace:^",
     "@repo/typescript-config": "workspace:^",

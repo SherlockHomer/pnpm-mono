@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 /// <reference types="cypress" />
 
 /// JSON fixture file can be loaded directly using
@@ -22,7 +21,9 @@ context('Files', () => {
 
     // when application makes an Ajax request matching "GET **/comments/*"
     // Cypress will intercept it and reply with the object in `example.json` fixture
-    cy.intercept('GET', '**/comments/*', { fixture: 'example.json' }).as('getComment');
+    cy.intercept('GET', '**/comments/*', { fixture: 'example.json' }).as(
+      'getComment'
+    );
 
     // we have code that gets a comment when
     // the button is clicked in scripts.js
@@ -38,7 +39,9 @@ context('Files', () => {
     // we are inside the "function () { ... }"
     // callback and can use test context object "this"
     // "this.example" was loaded in "beforeEach" function callback
-    expect(this.example, 'fixture in the test context').to.deep.equal(requiredExample);
+    expect(this.example, 'fixture in the test context').to.deep.equal(
+      requiredExample
+    );
 
     // or use "cy.wrap" and "should('deep.equal', ...)" assertion
     cy.wrap(this.example).should('deep.equal', requiredExample);

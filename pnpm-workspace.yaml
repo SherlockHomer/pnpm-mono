@@ -1,5 +1,15 @@
 packages:
-  - 'FE-apps/*'
-  - 'BE-apps/*'
-  - 'packages/*'
-  - 'configs/*'
+  - FE-apps/*
+  - BE-apps/*
+  - packages/*
+  - configs/*
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@swc/core'
+  - core-js
+  - core-js-pure
+  - cypress
+  - deasync
+  - esbuild
+  - nx
+  - unrs-resolver
